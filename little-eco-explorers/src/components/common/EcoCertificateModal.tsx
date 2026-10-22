@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { Award, Printer, X, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -78,9 +79,11 @@ export const EcoCertificateModal = ({
     window.print();
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl bg-card rounded-3xl shadow-2xl border-4 border-amber-400 overflow-hidden print:m-0 print:border-4 print:shadow-none">
+  if (!isOpen || typeof document === "undefined") return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-[100] overflow-y-auto bg-black/60 backdrop-blur-sm p-3 sm:p-4 flex min-h-full items-center justify-center animate-in fade-in duration-200">
+      <div className="relative w-full max-w-2xl bg-card rounded-3xl shadow-2xl border-4 border-amber-400 overflow-hidden my-auto max-h-[calc(100vh-1.5rem)] flex flex-col print:m-0 print:border-4 print:shadow-none">
         {/* Close Button (hidden in print) */}
         <button
           onClick={onClose}
@@ -92,7 +95,7 @@ export const EcoCertificateModal = ({
         </button>
 
         {/* Certificate Body */}
-        <div className="p-8 sm:p-12 text-center bg-gradient-to-b from-amber-50/60 via-background to-emerald-50/60 relative">
+        <div className="p-6 sm:p-10 text-center bg-gradient-to-b from-amber-50/60 via-background to-emerald-50/60 relative overflow-y-auto flex-1">
           {/* Decorative Corner Ornaments */}
           <div className="absolute top-3 left-3 text-2xl select-none">🌿</div>
           <div className="absolute top-3 right-3 text-2xl select-none print:block hidden sm:block">🌿</div>
@@ -162,6 +165,7 @@ export const EcoCertificateModal = ({
           </Button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

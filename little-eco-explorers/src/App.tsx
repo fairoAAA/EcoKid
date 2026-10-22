@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider, useLanguage } from "@/i18n/LanguageContext";
 import { AdminAuthProvider } from "@/admin/AdminAuthContext";
+import { UserAuthProvider } from "@/contexts/UserAuthContext";
 import { ProtectedRoute } from "@/admin/ProtectedRoute";
 
 // Bosh sahifa darhol kerak bo'lgani uchun oddiy import qilinadi.
@@ -57,8 +58,9 @@ const RouteFallback = () => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
-      <AdminAuthProvider>
-        <TooltipProvider>
+      <UserAuthProvider>
+        <AdminAuthProvider>
+          <TooltipProvider>
           <Toaster />
           <Sonner />
           <BrowserRouter>
@@ -100,6 +102,7 @@ const App = () => (
           </BrowserRouter>
         </TooltipProvider>
       </AdminAuthProvider>
+      </UserAuthProvider>
     </LanguageProvider>
   </QueryClientProvider>
 );

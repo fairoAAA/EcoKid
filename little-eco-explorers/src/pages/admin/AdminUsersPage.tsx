@@ -65,7 +65,7 @@ const AdminUsersPage = () => {
                 </TableCell>
                 <TableCell className="text-right">
                   {u.username !== session?.username ? (
-                    <Button variant="ghost" size="icon" onClick={() => confirm(`${u.displayName} o'chirilsinmi?`) && removeUser(u.username)}>
+                    <Button variant="ghost" size="icon" onClick={() => window.confirm(`${u.displayName} o'chirilsinmi?`) && removeUser(u.username)}>
                       <Trash2 className="w-4 h-4 text-destructive" />
                     </Button>
                   ) : (

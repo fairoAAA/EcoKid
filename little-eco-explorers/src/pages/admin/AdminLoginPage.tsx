@@ -12,6 +12,7 @@ const AdminLoginPage = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   if (session) return <Navigate to="/admin" replace />;
