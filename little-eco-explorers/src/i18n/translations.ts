@@ -108,8 +108,8 @@ const uz = {
   "quizzesPage.questions": "ta savol",
   "quizzesPage.participants": "kishi o'tdi",
   "quizzesPage.start": "Boshlash",
-  "quizzesPage.bannerText": "Hozircha faqat bitta interaktiv viktorina o'ynash mumkin — qolganlari tayyorlanmoqda!",
-  "quizzesPage.bannerCta": "Interaktiv viktorinani o'ynash",
+  "quizzesPage.bannerText": "70 ta savol va 7 ta bosqichli Katta Eko-Chempionat viktorinasi sizni kutmoqda!",
+  "quizzesPage.bannerCta": "Katta Viktorinani O'ynash",
 
   // --- Chiqindi saralash o'yini ---
   "recycle.title": "Axlatni Saralash",
@@ -290,8 +290,8 @@ const ru: Record<keyof typeof uz, string> = {
   "quizzesPage.questions": "вопросов",
   "quizzesPage.participants": "чел. прошли",
   "quizzesPage.start": "Начать",
-  "quizzesPage.bannerText": "Пока доступна только одна интерактивная викторина — остальные готовятся!",
-  "quizzesPage.bannerCta": "Играть в викторину",
+  "quizzesPage.bannerText": "Большой Эко-Чемпионат из 70 вопросов и 7 уровней ждёт тебя!",
+  "quizzesPage.bannerCta": "Играть в Чемпионат",
 
   // --- Игра «Сортировка мусора» ---
   "recycle.title": "Сортировка мусора",
@@ -472,8 +472,8 @@ const en: Record<keyof typeof uz, string> = {
   "quizzesPage.questions": "questions",
   "quizzesPage.participants": "people took it",
   "quizzesPage.start": "Start",
-  "quizzesPage.bannerText": "Only one interactive quiz is playable so far — the rest are on their way!",
-  "quizzesPage.bannerCta": "Play the interactive quiz",
+  "quizzesPage.bannerText": "The Grand Eco-Championship with 70 questions across 7 levels awaits you!",
+  "quizzesPage.bannerCta": "Play Grand Quiz",
 
   // --- Recycle game ---
   "recycle.title": "Sort the Trash",

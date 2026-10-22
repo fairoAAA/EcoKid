@@ -21,6 +21,7 @@ const GamesPage = lazy(() => import("./pages/GamesPage"));
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 const ArticleDetailPage = lazy(() => import("./pages/ArticleDetailPage"));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
+const ThematicQuizPlayerPage = lazy(() => import("./pages/ThematicQuizPlayerPage"));
 const RecycleGamePage = lazy(() => import("./pages/games/RecycleGamePage"));
 const TreeGamePage = lazy(() => import("./pages/games/TreeGamePage"));
 const QuizGamePage = lazy(() => import("./pages/games/QuizGamePage"));
@@ -78,6 +79,7 @@ const App = () => (
                 <Route path="/articles" element={<ArticlesPage />} />
                 <Route path="/articles/:slug" element={<ArticleDetailPage />} />
                 <Route path="/quizzes" element={<QuizzesPage />} />
+                <Route path="/quizzes/:id" element={<ThematicQuizPlayerPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
